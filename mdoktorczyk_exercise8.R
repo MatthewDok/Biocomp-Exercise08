@@ -8,7 +8,7 @@ bball<-read.table("UWvMSU_1-22-13.txt", header=TRUE)
 # cumulative scores matrix
 scores<-matrix(ncol=2, nrow=50, dimnames=list(c(1:50), c("UW", "MSU")))
 
-# for loop
+# for loop / if/else statements
 for(i in 1:nrow(bball)){
   if(bball[i,2]=="UW"){
     if(i>1){
@@ -31,6 +31,26 @@ for(i in 1:nrow(bball)){
   }
 }
 
-# plot
+# plot scores and time on graph
 plot(x=bball$time, y=scores[,1], type='l')
 lines(scores[,2])
+
+#################################################
+
+## Question 2
+
+# get user input
+user_guess <- readline(prompt = "Choose a number between 1 & 100: ")
+
+# have computer generate random number
+right_number=sample(1:100, 1)
+
+# if else statements
+if(user_guess > right_number){
+  print("Too high!")
+}else if(user_guess < right_number){
+    print("Too low!")
+}else{
+  print("You're right!")
+  }
+
