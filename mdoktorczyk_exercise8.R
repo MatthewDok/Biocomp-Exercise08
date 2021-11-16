@@ -37,7 +37,7 @@ lines(scores[,2])
 
 #################################################
 
-## Question 2 --- CURRENT ISSUE: NEED FOR LOOP TO DO IT 10 TIMES
+## Question 2
 
 # get user input
 user_guess <- readline(prompt = "Choose a number between 1 & 100: ")
