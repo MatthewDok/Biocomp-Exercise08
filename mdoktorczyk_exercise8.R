@@ -37,7 +37,7 @@ lines(scores[,2])
 
 #################################################
 
-## Question 2
+## Question 2 --- CURRENT ISSUE: NEED FOR LOOP TO DO IT 10 TIMES
 
 # get user input
 user_guess <- readline(prompt = "Choose a number between 1 & 100: ")
@@ -46,6 +46,8 @@ user_guess <- readline(prompt = "Choose a number between 1 & 100: ")
 right_number=sample(1:100, 1)
 
 # if else statements
+for(i in 1:10){
+  user_guess <- readline(prompt = "Choose a number between 1 & 100: ")  
 if(user_guess > right_number){
   print("Too high!")
 }else if(user_guess < right_number){
@@ -53,4 +55,4 @@ if(user_guess > right_number){
 }else{
   print("You're right!")
   }
-
+}
